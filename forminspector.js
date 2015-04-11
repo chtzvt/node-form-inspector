@@ -6,7 +6,10 @@ var http = require('http');
 var url = require('url') ;
 var qs = require('querystring');
 
+//On what port should form inspector run?
 var PORT = 8082;
+//Should we respond to requests that are empty?
+var ALLOW_EMPTY_REQS = false;
 
 //Date & time function so that responses are timestamped.
 function getDateTime() {
@@ -26,8 +29,25 @@ function getDateTime() {
 
 }
 
+//This function is used to determine whether the request object is empty.
+function isEmptyRequest(query) {
+  for(var properties in query) {
+    if(obj.hasOwnProperty(prop))
+      return false;
+    }
+  return true;
+}
+
+
 //The HTTP server itself.
 http.createServer(function (req, res) {
+
+//If we've received an empty request, then don't do anything.
+if(isEmptyRequest(url.parse(req.url,true).query) && ALLOW_EMPTY_REQS == false){
+  res.writeHead(200);
+  res.end();
+  return;
+}
 
 //This if/else block deals with the different methods necessary to deal with different kinds of requests.
 if(req.method === "GET") {
