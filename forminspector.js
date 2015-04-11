@@ -43,7 +43,7 @@ function isEmptyRequest(query) {
 http.createServer(function (req, res) {
 
 //If we've received an empty request, then don't do anything.
-if(isEmptyRequest(url.parse(req.url,true).query) && ALLOW_EMPTY_REQS == false){
+if((isEmptyRequest(url.parse(req.url,true).query) && req.method === "GET" && ALLOW_EMPTY_REQS == false) || (qs.parse(body) && req.method === "POST" && ALLOW_EMPTY_REQS == false) {
   res.writeHead(200);
   res.end();
   return;
