@@ -2,7 +2,7 @@ This simple utility provides an easy way to view the various data sent in HTTP P
 easily readable/parseable JSON response. 
 
 # Usage
-Just run the file using `sudo nodejs main.js` and point your browser to http://localhost:8083 (Or configure your webserver as a reverse proxy).
+Just run the file using `sudo nodejs main.js` and point your browser to http://localhost:8082 (Or configure your webserver as a reverse proxy).
 
 Also included in this repository is an init configuration file for Debian and Ubuntu systems, which will run the form inspector as a service in the background.
 Note that you may have to change the path to the javascript file if you aren't going to store it in /etc/node/forminspector.js. I wouldn't 
