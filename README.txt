@@ -1,7 +1,7 @@
 This simple utility provides an easy way to view the various data sent in HTTP POST and GET requests, providing an 
 easily readable/parseable JSON response. 
 
-#Usage
+# Usage
 Just run the file using `sudo nodejs main.js` and point your browser to http://localhost:8083 (Or configure your webserver as a reverse proxy).
 
 Also included in this repository is an init configuration file for Debian and Ubuntu systems, which will run the form inspector as a service in the background.
@@ -10,12 +10,12 @@ recommend using this, however, as there are many amazing alternatives to daemoni
 
 This utility supports [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
-#Configuration
+# Configuration
 By changing the value of the variable PORT, you can change the port the server listens on.
 
 By changing ALLOW_EMPTY_REQS, you can choose whether or not empty requests should be processed or simply return an error. 
 
-#Demo
+# Demo
 A live demo can be seen at http://fi.ctis.me.
 
 Enjoy! :)
