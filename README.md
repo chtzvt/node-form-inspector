@@ -16,6 +16,6 @@ By changing the value of the variable PORT, you can change the port the server l
 By changing ALLOW_EMPTY_REQS, you can choose whether or not empty requests should be processed or simply return an error. 
 
 # Demo
-A live demo can be seen at https://www.ctis.me/fi/.
+A live demo can be seen at http://fi.ctis.me.
 
 Enjoy! :)
